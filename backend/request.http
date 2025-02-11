@@ -1,0 +1,46 @@
+
+//// auth 
+POST http://localhost:5001/api/auth/signup
+Content-Type: application/json
+
+{
+    "fullname": "Ira Niko",
+    "username": "iraniko",
+    "password": "123456",
+    "confirmpassword": "123456",
+}
+
+###
+/////
+GET http://localhost:7777/api/users
+
+
+###
+POST http://localhost:7777/api/users/login
+Content-Type: application/json
+
+{
+
+    "email":"jay6@gmail.com",
+    "password":"1234"
+}
+
+
+
+
+
+###
+POST http://localhost:7777/api/messages/new-message
+Content-Type: application/json
+
+{
+
+    "text":"helllooo",
+    "author":"67974bcb789257bede7fc166"
+}
+
+
+###
+/////
+GET http://localhost:7777/api/messages
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Nzk3NDhlOGMwMGFlNzRlYzNhZjM5ZDgiLCJpYXQiOjE3MzgwNTkzMDksImV4cCI6MTczODA1OTM2OX0.T1Wlc6K4cLvVzizCqUtiDtYj5WuiFuM3kiwmv0ns0gU
