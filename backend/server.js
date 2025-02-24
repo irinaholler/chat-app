@@ -34,7 +34,8 @@ app.use(express.json()); // Allow to extract the Schema
 app.use(cookieParser());
 const __dirname = dirname(fileURLToPath(import.meta.url));
 console.log(__dirname)
-
+// Serve static files from the build folder
+//this will make the server to know where yout frontend is located !
 app.use(express.static(`${__dirname}/public/dist`))
 
 // to build the Route
