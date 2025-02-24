@@ -6,6 +6,7 @@ export const signup = async (req, res) => {
     try {
         // Check if the request body is valid JSON
         if (!req.body || typeof req.body !== 'object') {
+            console.log("Invalid JSON format");
             return res.status(400).json({ error: "Invalid JSON format" });
         }
 
@@ -46,6 +47,7 @@ export const signup = async (req, res) => {
                 profilePic: newUser.profilePic,
             });
         } else {
+            console.log("Invalid user data.");
             res.status(400).json({ error: "Invalid user data." })
         }
 
